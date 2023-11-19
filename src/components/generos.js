@@ -1,25 +1,26 @@
 import React from "react"
 import { useState, useEffect } from "react"
+import "./generos.css"
 
-export default function Generos({ setOpcaoGenero }) {
+export default function Generos({ setOpcaoGenero, opcaoGenero, type }) {
 
-    const [options, setOptions] = useState([])
+    const [options, setOptions] = useState([]);
+    const [popularShows, setPopularShows] = useState([])
 
     useEffect(() => {
-        const opt = [{ key: "", value: "Escolha um gênero" }];
-
-        fetch("https://api.themoviedb.org/3/genre/movie/list?api_key=9eef0665d5cb7863449089e6adad9e67")
+        const opt = [{key: "", value: "Selecione..."}];
+        fetch(`https://api.themoviedb.org/3/genre/${type}/list?api_key=9eef0665d5cb7863449089e6adad9e67`)
             .then(results => results.json())
             .then(data => {
                 data.genres.forEach(genre => {
-                    opt.push({ key: genre.id, value: genre.name });
+                    opt.push({key: genre.id, value: genre.name})
                 });
-                setOptions(opt)
+                setOptions(opt);
             })
-    }, []);
+    }, [])
 
     const handleChange = event => {
-        setOpcaoGenero({ key: event.target.value, value: event.target[event.target.selectedIndex].text })
+        setOpcaoGenero({key: event.target.value })
     }
 
     return (

@@ -8,8 +8,8 @@ export default function Layout({ children }) {
         <main>
             <h1>O que você quer assistir agora?</h1>
             <nav>
-                <Link to="/series">Séries</Link>
-                <Link to="/filmes">Filmes</Link>
+                <Link to="/series" data-page="series">Séries</Link>
+                <Link to="/filmes" data-page="filmes">Filmes</Link>
             </nav>
             {children}
         </main>
