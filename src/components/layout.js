@@ -4,6 +4,7 @@ import { Link } from "gatsby"
 
 export default function Layout({ children }) {
     return (
+        <>
         <main>
             <h1>O que você quer assistir agora?</h1>
             <nav>
@@ -11,7 +12,8 @@ export default function Layout({ children }) {
                 <Link to="/filmes">Filmes</Link>
             </nav>
             {children}
-            <footer></footer>
         </main>
+        <footer>2023</footer>
+        </>
     )
 }

@@ -1,7 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,600;0,800;1,400;1,600;1,800&display=swap');
+
 *, *::before, *::after {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 body {
@@ -14,5 +22,36 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    gap: 2rem;
+    height: 90vh;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    text-transform: uppercase;
+}
+
+nav > * {
+    border: 1px solid white;
+    padding: 1rem;
+    transition: all .5s ease;
+}
+
+nav > *:hover {
+    border: 1px solid white;
+    background-color: white;
+    color: black;
+    padding: 1rem;
+    scale: 1.1;
+}
+
+footer {
+    height: 10vh;
+    border-top: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
