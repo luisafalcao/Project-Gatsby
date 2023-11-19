@@ -1,0 +1,9 @@
+.container {
+    display: flex;
+    gap: 2rem;
+    max-width: 50%;
+}
+
+.column p {
+    margin-top: 1rem;
+}

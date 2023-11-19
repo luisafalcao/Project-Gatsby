@@ -12,6 +12,12 @@ a {
     color: inherit;
 }
 
+h1 {
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    text-align: center;
+    margin-top: 2rem;
+}
 h2 {
     font-weight: 400;
 }
@@ -19,6 +25,7 @@ h2 {
 body {
     background-color: black;
     color: white;
+    height: 10vh;
 }
 
 main {
@@ -27,7 +34,7 @@ main {
     align-items: center;
     justify-content: center;
     gap: 2rem;
-    height: 90vh;
+    min-height: 90vh;
 }
 
 nav {

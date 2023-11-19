@@ -2,10 +2,9 @@ import React from "react"
 import { useState, useEffect } from "react"
 import "./generos.css"
 
-export default function Generos({ setOpcaoGenero, opcaoGenero, type }) {
+export default function Generos({ setOpcaoGenero, type }) {
 
     const [options, setOptions] = useState([]);
-    const [popularShows, setPopularShows] = useState([])
 
     useEffect(() => {
         const opt = [{key: "", value: "Selecione..."}];
