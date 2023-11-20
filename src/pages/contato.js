@@ -31,10 +31,10 @@ const ContatoPage = () => {
 
     return (
         <Layout>
-            <h2>Deixe sugestões aqui:</h2>
+            <h2>Entre em contato:</h2>
             {modalOpen &&
             (<div className="modal">
-                <p>Sugestão enviada com sucesso!</p>
+                <p>Mensagem enviada com sucesso!</p>
             </div>)}
             <form name="form_contato" method="post" onSubmit={handleSubmit(onSubmit)} data-netlify="true" data-netlify-honeypot="bot-field">
                 <input type="hidden" name="form-name" value="form_contato"/>
