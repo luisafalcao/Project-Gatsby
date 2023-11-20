@@ -2,9 +2,9 @@ import * as React from 'react'
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import Layout from '../components/layout'
-import "./sugestoes.css"
+import "./contato.css"
 
-const SugestoesPage = () => {
+const ContatoPage = () => {
 
     const {register, handleSubmit, formState: { errors }, reset} = useForm();
     const [modalOpen, setModalOpen] = useState(false)
@@ -19,7 +19,7 @@ const SugestoesPage = () => {
         fetch("/", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: encode({ "form-name": "form_sugestoes", ...dados } )
+            body: encode({ "form-name": "form_contato", ...dados } )
         }).then(() => {
             setModalOpen(true)
             setTimeout(() => {
@@ -36,8 +36,8 @@ const SugestoesPage = () => {
             (<div className="modal">
                 <p>Sugestão enviada com sucesso!</p>
             </div>)}
-            <form name="form_sugestoes" method="post" onSubmit={handleSubmit(onSubmit)} data-netlify="true" data-netlify-honeypot="bot-field">
-                <input type="hidden" name="form-name" value="form_sugestoes"/>
+            <form name="form_contato" method="post" onSubmit={handleSubmit(onSubmit)} data-netlify="true" data-netlify-honeypot="bot-field">
+                <input type="hidden" name="form-name" value="form_contato"/>
                 <label>
                     <input type="text" name="nome" {...register("nome", { required: true, maxLength: 20 })} placeholder="Nome"/>
                     {errors.nome && errors.nome.type === "required" && (
@@ -77,6 +77,6 @@ const SugestoesPage = () => {
     )
 }
 
-export const Head = () => <title>Sugestões</title>
+export const Head = () => <title>Contato</title>
 
-export default SugestoesPage
+export default ContatoPage

@@ -16,12 +16,13 @@ export default function Layout({ children }) {
         <main>
             <header>
                 <h1><Link to="/">{data.site.siteMetadata.title}</Link></h1>
+                <p className="subtitle">Sugestões de filmes e séries para pessoas indecisas.</p>
             </header>
             {children}
             <footer>
                 <nav>
                     <Link to="/lancamentos">Lançamentos</Link>
-                    <Link to="/sugestoes">Sugestões</Link>
+                    <Link to="/contato">Contato</Link>
                 </nav>
             </footer>
         </main>
