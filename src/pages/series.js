@@ -1,8 +1,10 @@
 import * as React from "react"
 import { useState, useEffect } from "react"
+import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Generos from "../components/generos"
 import Show from "../components/show"
+import "../components/layout.css"
 
 const SeriesPage = () => {
   const [opcaoGenero, setOpcaoGenero] = useState({key: "", value: ""}) //qual opção do dropdown de generos foi selecionada
@@ -34,6 +36,11 @@ const SeriesPage = () => {
   
   return (
     <Layout>
+      <nav>
+          <Link to="/series" className="current">Série</Link>
+          ou
+          <Link to="/filmes">Filme</Link>
+      </nav>
       <h2>Qual gênero você prefere?</h2>
       <Generos setOpcaoGenero={setOpcaoGenero} type="tv" />
       {showComponent && 

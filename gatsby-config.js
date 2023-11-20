@@ -2,5 +2,14 @@ module.exports = {
   siteMetadata: {
     title: `O que assistir?`,
   },
-  plugins: [],
+  plugins: [
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: `blog`,
+        path: `${__dirname}/lancamentos`
+      }
+    },
+    "gatsby-plugin-mdx",
+  ],
 }

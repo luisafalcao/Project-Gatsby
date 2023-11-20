@@ -13,16 +13,16 @@ export default function Layout({ children }) {
         }
     `)
     return (
-        <>
-        <header><h1>{data.site.siteMetadata.title}</h1></header>
         <main>
-            <nav>
-                <Link to="/series">Séries</Link>
-                <Link to="/filmes">Filmes</Link>
-                <Link to="/lancamentos">Filmes</Link>
-            </nav>
+            <header>
+                <h1><Link to="/">{data.site.siteMetadata.title}</Link></h1>
+            </header>
             {children}
+            <footer>
+                <nav>
+                    <Link to="/lancamentos">Lançamentos</Link>
+                </nav>
+            </footer>
         </main>
-        </>
     )
 }
