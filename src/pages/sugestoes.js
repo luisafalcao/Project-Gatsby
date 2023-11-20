@@ -19,7 +19,7 @@ const SugestoesPage = () => {
         fetch("/", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: encode({ "form-name": "form_hook", ...dados } )
+            body: encode({ "form-name": "form_sugestoes", ...dados } )
         }).then(() => {
             setModalOpen(true)
             setTimeout(() => {
