@@ -1,9 +1,9 @@
 import * as React from "react"
 import { useState, useEffect } from "react"
-import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Generos from "../components/generos"
 import Show from "../components/show"
+import Nav from "../components/nav"
 import "../components/layout.css"
 
 const SeriesPage = () => {
@@ -36,13 +36,13 @@ const SeriesPage = () => {
   
   return (
     <Layout>
-      <nav>
-          <Link to="/series" className="current">Série</Link>
-          ou
-          <Link to="/filmes">Filme</Link>
-      </nav>
-      <h2>Qual gênero você prefere?</h2>
-      <Generos setOpcaoGenero={setOpcaoGenero} type="tv" />
+      {!showComponent && (
+       <>
+       <Nav pageName="series"/>
+       <h2>Qual gênero você prefere?</h2>
+       <Generos setOpcaoGenero={setOpcaoGenero} type="tv" />
+       </>
+      )}
       {showComponent && 
         (<Show setRandomShow={setRandomShow} randomShowId={randomShowId} type="tv"></Show>)
       }     

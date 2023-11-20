@@ -1,0 +1,22 @@
+article {
+    text-align: center;
+}
+
+article > * {
+    margin-top: 1rem;
+    transition: scale .4s ease;
+}
+
+article > *:hover {
+    scale: 1.1;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: .2rem;
+}
+
+.lancamento.container {
+    max-width: 80%;
+}

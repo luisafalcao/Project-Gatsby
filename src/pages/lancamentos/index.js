@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { useStaticQuery, graphql, Link } from 'gatsby'
 import Layout from '../../components/layout'
+import "./lancamentos.css"
 
 const LancamentosPage = () => {
 
@@ -20,16 +21,16 @@ const LancamentosPage = () => {
     `)
     return (
         <Layout>
-            <p>Estes são os últimos lançamentos:</p>
+            <h2>Lançamentos de novembro:</h2>
             <ul>
                 {
                     data.allMdx.nodes.map(node => (
                         <article>
-                            <h2>
+                            <p>
                                 <Link to={`/lancamentos/${node.frontmatter.slug}`}>
-                                {node.frontmatter.title}
+                                    {node.frontmatter.title}
                                 </Link>
-                            </h2>
+                            </p>
                         </article>
                     ))
                 }

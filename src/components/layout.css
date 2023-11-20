@@ -35,6 +35,14 @@ header {
     padding: 2rem;
 }
 
+header {
+    margin-bottom: auto;
+}
+
+footer {
+    margin-top: auto;
+}
+
 header > nav {
     margin-left: auto;
 }
@@ -43,7 +51,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     gap: 2rem;
     min-height: 100vh;
 }
@@ -60,6 +68,7 @@ nav > * {
     border: 1px solid white;
     padding: 1rem;
     transition: all .5s ease;
+    border-radius: 5px;
 }
 
 .current,
