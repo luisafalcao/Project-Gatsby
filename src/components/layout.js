@@ -20,10 +20,9 @@ export default function Layout({ children }) {
             </header>
             {children}
             <footer>
-                <nav>
-                    <Link to="/lancamentos">Lançamentos</Link>
-                    <Link to="/contato">Contato</Link>
-                </nav>
+                <Link to="/">Início</Link>
+                <Link to="/lancamentos">Lançamentos</Link>
+                <Link to="/contato">Contato</Link>
             </footer>
         </main>
     )

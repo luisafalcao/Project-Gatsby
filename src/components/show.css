@@ -1,9 +1,20 @@
 .container {
     display: flex;
+    flex-wrap: wrap;
     gap: 2rem;
     max-width: 50%;
 }
 
+@media screen and (min-width: 983px) {
+    .column:first-child {
+        text-align: right;
+    }
+}
+
 .column p {
     margin-top: 1rem;
+}
+
+.container > * {
+    flex: 1 1 230px;
 }
