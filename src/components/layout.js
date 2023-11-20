@@ -21,6 +21,7 @@ export default function Layout({ children }) {
             <footer>
                 <nav>
                     <Link to="/lancamentos">Lançamentos</Link>
+                    <Link to="/sugestoes">Sugestões</Link>
                 </nav>
             </footer>
         </main>
